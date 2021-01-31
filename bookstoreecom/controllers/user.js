@@ -1,3 +1,6 @@
-exports.sayHi = (req, res) => {
-    res.json({ message: "Im responding"});
+const User = require('../models/user')
+
+exports.signup = (req, res) => {
+    console.log(req.body)
+    const user = new User(req.body)
 };
