@@ -12,6 +12,7 @@ const auth = require('./routes/auth')
 const userRoutes = require('./routes/user')
 const authRoutes = require('./routes/auth')
 const categoryRoutes = require('./routes/category');
+const profileRoutes = require('./routes/product')
 
 //app
 const app = express();
@@ -35,6 +36,7 @@ app.use(cookieParser());
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
+app.use("/api", profileRoutes);
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
